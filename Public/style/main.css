@@ -1,9 +1,59 @@
-.chart rect {
-    fill: steelblue;
+.roomChart{
+    overflow: auto;
 }
 
-.chart text {
-    fill: white;
-    font: 10px sans-serif;
-    text-anchor: end;
+.room .bar{
+    fill:steelblue;
+}
+.room .bar:hover{
+    fill:brown;
+}
+
+.room .axis{
+    font:10px sans-serif;
+}
+
+.room .axis path,.room .axis line{
+    fill:none;
+    stroke:#000;
+    shape-rendering:crispEdges;
+}
+
+.room .x.axis path{
+    display: none;
+}
+
+.tip{
+    line-height: 1.1;
+    text-align: center;
+    /*font-weight: bold;*/
+    padding: 12px;
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    border-radius: 2px;
+}
+.tip .value{
+    color: red;
+    font-weight: 200;
+}
+.tip .time{
+    font-weight: 200;
+}
+
+.tip:after{
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0,0,0,0.8);
+    content:'\25BC';
+    position: absolute;
+    text-align: center;
+}
+
+.tip.n:after{
+    margin: -1px 0 0 0 ;
+    top:100%;
+    left: 0;
 }

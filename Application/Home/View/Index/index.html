@@ -2,16 +2,33 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="__PUBLIC__/style/main.css">
-    <title></title>
+    <title>Yixi's Room</title>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h2>室内温度 <small>当前温度 {$roomCurrent}°C</small></h2>
 
-<svg class="chart">
-</svg>
-
-<script src="__PUBLIC__/script/d3.min.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="col-md-12 roomChart">
+            <svg class="room"></svg>
+        </div>
+    </div>
+</div>
+<script>
+    var roomData = JSON.parse('{$roomValue}');
+</script>
 <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/script/d3.min.js" charset="utf-8"></script>
+<script src="__PUBLIC__/script/d3-tip.js"></script>
 <script src="__PUBLIC__/script/main.js"></script>
 </body>
 </html>
